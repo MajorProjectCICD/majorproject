@@ -2,7 +2,7 @@
 
 import { useAuth } from '@/Provider/auth';
 import { LoginForm } from '@/components';
-import { Button, Card, Link, Spacer, Spinner } from '@nextui-org/react';
+import { Button, Card, Link, Spacer } from '@nextui-org/react';
 import NextLink from 'next/link';
 import { useRouter } from 'next/navigation';
 import { createRef, useState } from 'react';
@@ -47,8 +47,8 @@ const Login = () => {
         shadow="sm"
       >
         <LoginForm formRef={formRef} />
-        <Button fullWidth type="button" onClick={loginUser} color="success">
-          {loading ? <Spinner /> : 'Log in'}
+        <Button fullWidth type="button" onClick={loginUser} color="success" isLoading={loading}>
+          Log in
         </Button>
         <p className="text-danger text-center pt-3">{errorMsg && errorMsg}</p>
       </Card>
