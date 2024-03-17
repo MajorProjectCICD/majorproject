@@ -3,7 +3,6 @@ on:
   push:
     branches: ['dev']
   workflow_dispatch:
-needs: unit-tests
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
