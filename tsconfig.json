@@ -19,6 +19,12 @@
     "paths": { "@/*": ["./*"] },
     "plugins": [{ "name": "next" }]
   },
+  "ts-node": {
+    "compilerOptions": {
+     "module": "es2015",
+      "moduleResolution": "node"
+    }
+ },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "types.d.ts", ".next/types/**/*.ts"],
   "exclude": ["node_modules", "./cypress.config.ts"]
 }

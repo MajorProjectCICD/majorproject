@@ -47,7 +47,7 @@ const Login = () => {
         shadow="sm"
       >
         <LoginForm formRef={formRef} />
-        <Button fullWidth type="button" onClick={loginUser} color="success" isLoading={loading}>
+        <Button fullWidth type="submit" onClick={loginUser} color="success" isLoading={loading}>
           Log in
         </Button>
         <p className="text-danger text-center pt-3">{errorMsg && errorMsg}</p>

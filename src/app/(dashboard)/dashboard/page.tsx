@@ -41,8 +41,6 @@ const Dashboard = () => {
     }
   }, [isLoggedIn, router]);
 
-  console.log('renders');
-
   return (
     <main className="h-screen w-full px-5">
       {isLoggedIn ? (

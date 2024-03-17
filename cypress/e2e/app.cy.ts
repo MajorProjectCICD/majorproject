@@ -1,24 +1,16 @@
-/* eslint-disable */
-// Disable ESLint to prevent failing linting inside the Next.js repo.
-// If you're using ESLint on your project, we recommend installing the ESLint Cypress plugin instead:
-// https://github.com/cypress-io/eslint-plugin-cypress
-
-// Cypress E2E Test
 describe('Navigation', () => {
-  it('should navigate to the login page', () => {
-    // Start from the index page
-    cy.visit('http://localhost:3000');
-
-    // Find a link with an href attribute containing "about" and click it
-    cy.get('a[href*="about"]').click();
-
-    // The new url should include "/about"
+  it('should navigate to the Register Page', () => {
+    cy.visit('http://localhost:3000/');
+    cy.get('a[href*="/auth/register"]').first().click();
+    cy.url().should('include', '/auth/register');
+    cy.get('h2').contains('Register Student');
+  });
+  it('should navigate to the login Page', () => {
+    cy.visit('http://localhost:3000/');
+    cy.get('a[href*="/auth/login"]').first().click();
     cy.url().should('include', '/auth/login');
-
-    // The new page should contain an h1 with "About page"
     cy.get('h2').contains('Login Student');
   });
 });
+export { };
 
-// Prevent TypeScript from reading file as legacy script
-export {};
