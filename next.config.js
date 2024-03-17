@@ -2,7 +2,8 @@
 
 const nextConfig = {
   trailingSlash: false,
-  reactStrictMode: false
+  reactStrictMode: false,
+  output: "standalone"
 };
 
 module.exports = nextConfig;
