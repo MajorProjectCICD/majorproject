@@ -16,7 +16,7 @@ jobs:
         with:
           oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
           oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
-          tags: tag:ci
+          # tags: tag:ci
       - name: Configure Docker for insecure registry
         env:
           DOCKER_REGISTRY: ${{ secrets.DOCKER_REGISTRY }}
