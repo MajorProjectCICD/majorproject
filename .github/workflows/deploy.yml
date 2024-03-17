@@ -6,7 +6,9 @@ on:
 jobs:
   build_and_push:
     runs-on: ubuntu-latest
-    needs: test 
+    name: Deploy build docker image, push and deploy to server
+    env:
+      MACHINE: home
     steps:
       - uses: actions/checkout@v3
       - name: Setup Tailscale
