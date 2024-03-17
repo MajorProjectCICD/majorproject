@@ -1,5 +1,6 @@
 import { AttendanceView, UserDetails } from '@/components';
 import { render, screen } from '@testing-library/react';
+
 // Mocking getCookie
 jest.mock('cookies-next', () => ({
   getCookie: jest.fn()

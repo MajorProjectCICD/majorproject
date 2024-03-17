@@ -7,7 +7,7 @@ import {
 
 import Login from './page';
 
-jest.mock('@/Provider/auth', () => ({
+jest.mock('../../../Provider/auth', () => ({
   useAuth: jest.fn(() => ({
     isLoggedIn: false,
     login: jest.fn()
@@ -20,7 +20,12 @@ jest.mock('next/navigation', () => ({
 }));
 
 const mockRouter: AppRouterInstance = {
-  push: jest.fn()
+  push: jest.fn(),
+  back: jest.fn(),
+  forward: jest.fn(),
+  refresh: jest.fn(),
+  prefetch: jest.fn(),
+  replace: jest.fn()
 };
 
 describe('Login component', () => {
