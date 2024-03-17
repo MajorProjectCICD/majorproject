@@ -32,7 +32,8 @@
       "no-unused-vars": "off"
     },
     "ignorePatterns": [
-      "**/*.test.*"
+      "**/*.test.*",
+      "**/*.cy.*"
     ]
   },
   "prettier": {

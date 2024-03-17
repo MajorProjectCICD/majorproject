@@ -156,7 +156,7 @@ export default function RegisterForm({
       <Spacer y={2} />
 
       <div className="flex justify-between">
-        <Checkbox defaultSelected radius="full">
+        <Checkbox defaultSelected radius="full" name='remember'>
           Remember me
         </Checkbox>
         <Link as={NextLink} href="/" isDisabled title="Not implemented yet!!">
@@ -167,7 +167,7 @@ export default function RegisterForm({
 
       <Button
         fullWidth
-        type="button"
+        type="submit"
         onClick={registerUser}
         color="success"
         isDisabled={isDisabled}
